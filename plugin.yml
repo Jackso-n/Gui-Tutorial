@@ -1,0 +1,14 @@
+name: Gui Tutorial
+api: 4.0.0
+version: 1.0
+main: Gui\Main
+
+command:
+ test:
+  description: "Your description"
+  permission: ts.Gui
+
+permissions:
+ ts.Gui:
+  description: "Your description"
+  default: true
