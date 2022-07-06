@@ -8,6 +8,7 @@ use pocketmine\player\Player;
 use pocketmine\Server;
 use pocketmine\PluginBase;
 use pocketmine\item\Item;
+use pocketmine\item\VanillaItems;
 use pocketmine\event\Listener;
 //Add To Work InvMenu
 use muqsit\invmenu\InvMenu;
@@ -29,4 +30,11 @@ if($command->getName() == "test"){
   }
 return true;
  }
+public function Gui($player){
+$menu = InvMenu::create(InvMenu::TYPE_CHEST);
+$inventory = $menu->getInventory();
+$menu->setName("§eGui");
+$inventory->addItem(VanillaItems::DIAMOND());
+$menu->send($player);
+}
 }
