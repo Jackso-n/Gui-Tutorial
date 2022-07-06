@@ -26,7 +26,7 @@ class Main extends PluginBase implements Listener{
 public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
   //Main Command
 if($command->getName() == "test"){
-  $sender->sendMessage("Test");
+  $this->Gui($sender);
   }
 return true;
  }
